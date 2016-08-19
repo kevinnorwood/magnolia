@@ -11,7 +11,7 @@ class Test
     @driver = driver
     @verbose = verbose
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -19,21 +19,21 @@ class Test
 
     return false
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
   def perform
 
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
   def prepare_to_perform
 
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -41,14 +41,14 @@ class Test
 
     return false
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
   def teardown
     @should_keep? nil : @driver.quit
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -62,14 +62,14 @@ class Test
     teardown
     return didPass
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
   def get_driver
     return @driver
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 

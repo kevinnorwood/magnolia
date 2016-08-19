@@ -10,7 +10,7 @@ class TestDriver
     @member_tests = []
     set_tests(tests: tests)
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -27,7 +27,7 @@ class TestDriver
     puts "********RESULTS******** #{@tests_run.to_s} tests run, #{tests_failed.to_s} tests failed for #{self.class.name} in #{@target_browser}"
     return [@tests_run, tests_failed]
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -37,21 +37,21 @@ class TestDriver
       @member_tests.push(test)
     end
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
   def get_tests
     return @member_tests
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
   def add_member_test(test)
     @member_tests.push(test)
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 

@@ -13,14 +13,14 @@ class Plantation
     @total_results[0] += results[0]
     @total_results[1] += results[1]
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
   def reset_results
     @total_results = [0,0]
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -38,14 +38,14 @@ class Plantation
       display_main_menu
     end
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
   def faux_clear_screen
     puts "\n"*30
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -63,7 +63,7 @@ class Plantation
     end
     puts "***********************RESULTS*********************** #{@total_results[0].to_s} tests run, #{@total_results[1].to_s} tests failed!"
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -75,7 +75,7 @@ class Plantation
     puts "************************************************************************"
     puts "\n"*3
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -87,7 +87,7 @@ class Plantation
     puts "5. Quit"
     puts "\n"*3
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -97,7 +97,7 @@ class Plantation
       puts "#{index+1}. #{browser}"
     end
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -107,7 +107,7 @@ class Plantation
       puts "#{index+1}. #{driver}"
     end
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -121,7 +121,7 @@ class Plantation
       end
     end
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -131,7 +131,7 @@ class Plantation
       @browsers_to_test.push(@all_browsers[browser_index.to_i-1])
     end
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -141,7 +141,7 @@ class Plantation
       @drivers_to_test.push($testDrivers[driver_index.to_i-1])
     end
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -160,7 +160,7 @@ class Plantation
       end
     end
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -188,7 +188,7 @@ class Plantation
     end
 
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -201,7 +201,7 @@ class Plantation
     update_browsers_to_test(browser_indexes: chosen_browser_indexes)
     display_main_menu
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -214,7 +214,7 @@ class Plantation
     update_drivers_to_test(driver_indexes: chosen_driver_indexes)
     display_main_menu
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -227,7 +227,7 @@ class Plantation
     update_tests_to_run(test_indexes: chosen_test_indexes)
     display_main_menu
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -243,7 +243,7 @@ class Plantation
     end
     return ""
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 

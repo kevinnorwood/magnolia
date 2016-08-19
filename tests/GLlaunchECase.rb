@@ -14,7 +14,7 @@ class GLlaunchECase < Test
     end
     return didPass
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
     return false
   end
@@ -23,14 +23,14 @@ class GLlaunchECase < Test
     @driver = Selenium::WebDriver.for @target_browser
     @driver.get $OC_DIRECT_URL
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
   def prepare_to_perform
     #optional implimentation
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -38,7 +38,7 @@ class GLlaunchECase < Test
     #optional implimentation
     return false
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
     return false
   end

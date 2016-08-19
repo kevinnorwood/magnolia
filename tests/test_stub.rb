@@ -5,7 +5,7 @@ class TestSubClass < Test #TODO: Change name
     #TODO: Impliment
     return false
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
     return false
   end
@@ -13,14 +13,14 @@ class TestSubClass < Test #TODO: Change name
   def perform
     #TODO: Impliment
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
   def prepare_to_perform
     #optional implimentation
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
   end
 
@@ -28,7 +28,7 @@ class TestSubClass < Test #TODO: Change name
     #optional implimentation
     return false
   rescue => e
-    puts "An error has occoured in #{self.class.name}.#{__method__}"
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
     return false
   end
