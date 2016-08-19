@@ -1,0 +1,6 @@
+require 'rubygems'
+require 'selenium-webdriver'
+require_relative 'assumptions'
+require_relative 'TestList'
+require_relative 'TestDriverList'
+require_relative 'ActionList.rb'
