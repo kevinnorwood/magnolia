@@ -13,5 +13,4 @@ the new Action must be added to ActionList.rb
 
 a Test can and should be added to at least one Test Driver. simply add the Test to the set_test function.
 
-assumptions can be updated as needed. Beware- assumtions should be global, make sure no other Tests or Actions will be broken by changing an assumption. 
-
+assumptions can be updated as needed. Beware- assumptions should be global, make sure no other Tests or Actions will be broken by changing an assumption.
