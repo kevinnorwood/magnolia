@@ -1,6 +1,6 @@
 # magnolia
 
-launch through magnolia.rb
+launch through magnolia.rb, magnolia can be optionally launched with two parameters, the exact name of ONE specific test with the key for ONE browser
 
 to add a Test, duplicate test_stub.rb with name of new Test
 the new Test must be added to TestList.rb
