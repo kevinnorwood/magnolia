@@ -3,11 +3,11 @@ class VEFbuttonExists < Test
 
   def did_test_pass
     focus_elements = @driver.find_elements(:class, "focus")
-    puts "focus_elements: #{focus_elements}"
+    #puts "focus_elements: #{focus_elements}"
     found = false
     index = 0
     until found
-      puts "focus_elements[#{index}]: #{focus_elements[index].attribute('focusele')}"
+      #puts "focus_elements[#{index}]: #{focus_elements[index].attribute('focusele')}"
       if(focus_elements[index].attribute('focusele') == "viewExternal") then
         found = true
       end
@@ -15,6 +15,7 @@ class VEFbuttonExists < Test
     end
 
     if (focus_elements[index-1].displayed?) then
+      @button = focus_elements[index-1]
       return true
     else
       return false
@@ -44,6 +45,14 @@ class VEFbuttonExists < Test
   def is_ready_to_perform
     #optional implimentation
     return false
+  rescue => e
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
+    puts e.message
+    return false
+  end
+
+  def get_link
+    return @button.nil? ? nil : @button
   rescue => e
     puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message

@@ -2,7 +2,8 @@ class ViewExternalFile < TestDriver
 
   def set_tests(tests: [])
     [
-      VEFbuttonExists
+      VEFbuttonExists,
+      VEFbuttonClick
     ].each do |test|
       add_member_test(test)
     end
