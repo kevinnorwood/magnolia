@@ -1,9 +1,10 @@
-class OCMcorrectProgramName < Test
+class OCMcaseNumbersDisplayed < Test
 
 
   def did_test_pass
-    title_type = @driver.find_element(:id, "title_type")
-    if (title_type.text == "CPS") then
+    my_cases = @driver.find_element(:id, "my_cases")
+    puts "my_cases.text: #{my_cases.text}"
+    if (my_cases.text == "99999901, 123456, 654321") then
       return true
     else
       return false
