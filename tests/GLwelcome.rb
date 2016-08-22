@@ -1,9 +1,14 @@
-class TestSubClass < Test #TODO: Change name
+class GLwelcome < Test #TODO: Change name
 
 
   def did_test_pass
-    #TODO: Impliment
-    return false
+    greeting = @driver.find_element(:id, "greeting")
+    # puts "greeting methods: #{greeting.text}"
+    if (@driver.title == "OneCase")
+      if (greeting.text == "Welcome!")
+        return true
+      end
+    end
   rescue => e
     puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
@@ -11,7 +16,9 @@ class TestSubClass < Test #TODO: Change name
   end
 
   def perform
-    #TODO: Impliment
+    @driver = Selenium::WebDriver.for @target_browser
+    @driver.get $OC_DIRECT_URL
+
   rescue => e
     puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message

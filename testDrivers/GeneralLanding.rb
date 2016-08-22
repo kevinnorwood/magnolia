@@ -2,7 +2,8 @@ class GeneralLanding < TestDriver
 
   def set_tests(tests: [])
     [
-      GLlaunchECase
+      GLlaunchECase,
+      GLwelcome
     ].each do |test|
       add_member_test(test)
     end
