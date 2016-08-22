@@ -1,4 +1,4 @@
-class GLlaunchECase < Test
+class OCMlaunchECase < Test
 
 
   def did_test_pass

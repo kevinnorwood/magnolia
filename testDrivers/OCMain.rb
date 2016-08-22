@@ -1,9 +1,9 @@
-class GeneralLanding < TestDriver
+class OCMain < TestDriver
 
   def set_tests(tests: [])
     [
-      GLlaunchECase,
-      GLwelcome
+      OCMlaunchECase,
+      OCMwelcome
     ].each do |test|
       add_member_test(test)
     end

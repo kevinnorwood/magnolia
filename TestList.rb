@@ -1,3 +1,3 @@
 require_relative 'tests/Test'
-require_relative 'tests/GLlaunchECase'
-require_relative 'tests/GLwelcome'
+require_relative 'tests/OCMlaunchECase'
+require_relative 'tests/OCMwelcome'

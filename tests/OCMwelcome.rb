@@ -1,4 +1,4 @@
-class GLwelcome < Test #TODO: Change name
+class OCMwelcome < Test #TODO: Change name
 
 
   def did_test_pass
