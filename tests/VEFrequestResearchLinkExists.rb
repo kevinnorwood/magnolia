@@ -5,6 +5,7 @@ class VEFrequestResearchLinkExists < Test
     request_research_img = @driver.find_element(:id, "request_research")
     if (request_research_img.displayed?) then
       if(request_research_img.attribute("src") == "https://qa1.neuone.com/rhamilton/onecase4200/app/webroot/img/request/oneCase_requestResearch_icon.png") then
+        @request_research_img = request_research_img
         return true
       else
         return false
@@ -38,6 +39,14 @@ class VEFrequestResearchLinkExists < Test
   def is_ready_to_perform
     #optional implimentation
     return false
+  rescue => e
+    puts "An error has occurred in #{self.class.name}.#{__method__}"
+    puts e.message
+    return false
+  end
+
+  def get_link
+    return @request_research_img.nil? ? nil : @request_research_img
   rescue => e
     puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
