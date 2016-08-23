@@ -26,7 +26,7 @@ class OCMbuttonsHover < Test #TODO: Change name
       if elem.attribute("src") != focusHover[index]
         return false
       end
-      sleep 5
+      # sleep 2
     end
     return true
   rescue => e
