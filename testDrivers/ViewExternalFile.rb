@@ -5,7 +5,8 @@ class ViewExternalFile < TestDriver
       VEFbuttonExists,
       VEFbuttonClick,
       #VEFbuttonClickAfterSessionTimeOut,
-      VEFtitleIconDisplayed
+      VEFtitleIconDisplayed,
+      VEFoneCaseLogo
     ].each do |test|
       add_member_test(test)
     end
