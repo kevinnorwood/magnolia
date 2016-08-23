@@ -6,6 +6,7 @@ class OCMain < TestDriver
       OCMwelcome,
       OCMcorrectProgramName,
       OCMbuttonsExist,
+      OCMbuttonsHover,
       OCMcaseNumbersDisplayed,
       OCMbannerLogo,
       OCMnotesExist
