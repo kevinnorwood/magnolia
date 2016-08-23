@@ -32,7 +32,7 @@ class Plantation
     if(args[0].nil?) then
       display_main_menu
     else
-      puts "args: #{args}"
+      #puts "args: #{args}"
       @tests_to_run = [get_test_by_name(name: args[0])]
       @browsers_to_test = [args[1].to_sym]
       display_main_menu
@@ -235,7 +235,7 @@ class Plantation
     #TODO: create method for building the test list and just reference that.
     $testDrivers.each do |testDriver|
       testDriver.new.get_tests.each do |specific_test|
-        puts "specific_test.name: #{specific_test.name}, and name: #{name}"
+        #puts "specific_test.name: #{specific_test.name}, and name: #{name}"
         if (specific_test.name == name) then
           return specific_test
         end
