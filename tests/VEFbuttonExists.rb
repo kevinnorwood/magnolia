@@ -10,12 +10,13 @@ class VEFbuttonExists < Test
       #puts "focus_elements[#{index}]: #{focus_elements[index].attribute('focusele')}"
       if(focus_elements[index].attribute('focusele') == "viewExternal") then
         found = true
+      else
+        index += 1
       end
-      index += 1
     end
 
-    if (focus_elements[index-1].displayed?) then
-      @button = focus_elements[index-1]
+    if (focus_elements[index].displayed?) then
+      @button = focus_elements[index]
       return true
     else
       return false
