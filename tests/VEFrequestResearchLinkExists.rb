@@ -1,26 +1,19 @@
-class VEFbuttonExists < Test
+class VEFrequestResearchLinkExists < Test
 
 
   def did_test_pass
-    focus_elements = @driver.find_elements(:class, "focus")
-    #puts "focus_elements: #{focus_elements}"
-    found = false
-    index = 0
-    until found
-      #puts "focus_elements[#{index}]: #{focus_elements[index].attribute('focusele')}"
-      if(focus_elements[index].attribute('focusele') == "viewExternal") then
-        found = true
+    request_research_img = @driver.find_element(:id, "request_research")
+    if (request_research_img.displayed?) then
+      if(request_research_img.attribute("src") == "https://qa1.neuone.com/rhamilton/onecase4200/app/webroot/img/request/oneCase_requestResearch_icon.png") then
+        @request_research_img = request_research_img
+        return true
       else
-        index += 1
+        return false
       end
-    end
-
-    if (focus_elements[index].displayed?) then
-      @button = focus_elements[index]
-      return true
     else
       return false
     end
+    return false
   rescue => e
     puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
@@ -35,7 +28,7 @@ class VEFbuttonExists < Test
   end
 
   def prepare_to_perform
-    loader = OCMlaunchECase.new(target: @target_browser, keep: true)
+    loader = VEFbuttonClick.new(target: @target_browser, keep: true, driver: @driver)
     loader.run
     @driver = loader.get_driver
   rescue => e
@@ -53,7 +46,7 @@ class VEFbuttonExists < Test
   end
 
   def get_link
-    return @button.nil? ? nil : @button
+    return @request_research_img.nil? ? nil : @request_research_img
   rescue => e
     puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
