@@ -11,6 +11,6 @@ the new TestDriver must be added to TestDriverList.rb
 to add an Action, duplicate action_stub.rb with name of new Action
 the new Action must be added to ActionList.rb
 
-a Test can and should be added to at least one Test Driver. simply add the Test to the set_test function.
+a Test can and should be added to at least one Test Driver. simply add the Test to the set_test method.
 
 assumptions can be updated as needed. Beware- assumptions should be global, make sure no other Tests or Actions will be broken by changing an assumption.
