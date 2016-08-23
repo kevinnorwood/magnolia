@@ -5,7 +5,9 @@ class OCMain < TestDriver
       OCMlaunchECase,
       OCMwelcome,
       OCMcorrectProgramName,
-      OCMcaseNumbersDisplayed
+      OCMbuttonsExist,
+      OCMcaseNumbersDisplayed,
+      OCMbannerLogo
     ].each do |test|
       add_member_test(test)
     end
