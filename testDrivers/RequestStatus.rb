@@ -3,7 +3,8 @@ class RequestStatus < TestDriver #TODO: Change name
   def set_tests(tests: [])
     [
       RSbuttonExists,
-      RSbuttonClick
+      RSbuttonClick,
+      RScaseNumbersDisplayed
     ].each do |test|
       add_member_test(test)
     end
