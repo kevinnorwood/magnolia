@@ -2,7 +2,7 @@ class RequestRedaction < TestDriver #TODO: Change name
 
   def set_tests(tests: [])
     [
-      #Member tests
+      RRbuttonExists
     ].each do |test|
       add_member_test(test)
     end
