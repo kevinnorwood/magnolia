@@ -9,7 +9,8 @@ class ViewExternalFile < TestDriver
       VEFoneCaseLogo,
       VEFrequestResearchLinkExists,
       VEFrequestResearchLinkClick,
-      VEFcolumnHeaderIcons
+      VEFcolumnHeaderIcons,
+      VEFviewDocumentClick
     ].each do |test|
       add_member_test(test)
     end
