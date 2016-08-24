@@ -6,7 +6,8 @@ class RequestStatus < TestDriver #TODO: Change name
       RSbuttonClick,
       RScaseNumbersDisplayed,
       RStitleIconDisplayed,
-      RSbannerDisplayed
+      RSbannerDisplayed,
+      RSemptyFields
     ].each do |test|
       add_member_test(test)
     end

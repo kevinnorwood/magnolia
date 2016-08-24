@@ -7,8 +7,9 @@ class RSemptyFields < Test
       @driver.find_element(:id, "dateFrom"),
       @driver.find_element(:id, "dateTo")
     ]
-    if (text_fields.displayed?) then
-      text_fields.each do |field, index|
+    text_fields.each do |field|
+      if (field.displayed?) then
+        # puts "text field contains: #{field.text}"
         if (field.text != "")
           return false
         end
