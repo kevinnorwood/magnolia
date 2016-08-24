@@ -1,11 +1,14 @@
-class RScaseNumbersDisplayed < Test #TODO: Change name
+class RStitleIconDisplayed < Test #TODO: Change name
 
 
   def did_test_pass
-    my_cases = @driver.find_element(:id, "my_cases")
-    puts "my_cases.text: #{my_cases.text}"
-    if (my_cases.text == "99999901, 123456, 654321") then
-      return true
+    title_icon = @driver.find_element(:id, "request_status")
+    if (title_icon.displayed?) then
+      if(title_icon.attribute("src") == "https://qa1.neuone.com/rhamilton/onecase4200/app/webroot/img/request/oneCase_home_button_requestStatus-unselected.png") then
+        return true
+      else
+        return false
+      end
     else
       return false
     end
