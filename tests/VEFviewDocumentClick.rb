@@ -18,19 +18,12 @@ class VEFviewDocumentClick < Test
   end
 
   def prepare_to_perform
-    #optional implimentation
+    loader = VEFbuttonClick.new(target: @target_browser, keep: true, driver: @driver)
+    loader.run
+    @driver = loader.get_driver
   rescue => e
     puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
-  end
-
-  def is_ready_to_perform
-    #optional implimentation
-    return false
-  rescue => e
-    puts "An error has occurred in #{self.class.name}.#{__method__}"
-    puts e.message
-    return false
   end
 
 end

@@ -2,7 +2,7 @@ class VEFbuttonClickAfterSessionTimeOut < Test
 
 
   def did_test_pass
-    #TODO: check for the correct error message 
+    #TODO: check for the correct error message
     #puts "driver.current_url: #{@driver.current_url}"
     #puts "driver.title: #{@driver.title}"
     if(@driver.current_url == "https://qa1.neuone.com/rhamilton/onecase4200/index.php/request/external") then
@@ -41,15 +41,6 @@ class VEFbuttonClickAfterSessionTimeOut < Test
   rescue => e
     puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
-  end
-
-  def is_ready_to_perform
-    #optional implimentation
-    return false
-  rescue => e
-    puts "An error has occurred in #{self.class.name}.#{__method__}"
-    puts e.message
-    return false
   end
 
 end

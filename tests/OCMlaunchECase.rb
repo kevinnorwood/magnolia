@@ -36,13 +36,4 @@ class OCMlaunchECase < Test
     puts e.message
   end
 
-  def is_ready_to_perform
-    #optional implimentation
-    return false
-  rescue => e
-    puts "An error has occurred in #{self.class.name}.#{__method__}"
-    puts e.message
-    return false
-  end
-
 end

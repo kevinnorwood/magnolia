@@ -2,7 +2,7 @@ class RSusernameCase < Test
 
   def did_test_pass
     if @column1.nil? || @column2.nil?
-      return false      
+      return false
     end
     if @column1 == @column2
       return true
@@ -35,15 +35,6 @@ class RSusernameCase < Test
   rescue => e
     puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
-  end
-
-  def is_ready_to_perform
-    #optional implimentation
-    return false
-  rescue => e
-    puts "An error has occurred in #{self.class.name}.#{__method__}"
-    puts e.message
-    return false
   end
 
   def search(namecase)
