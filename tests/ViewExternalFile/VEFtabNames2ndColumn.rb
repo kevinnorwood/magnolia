@@ -12,7 +12,8 @@ class VEFtabNames2ndColumn < Test
                 "Childs Service Plans",
                 "Childs Educational Records",
                 "Legacy",
-                "APS In-Home"]
+                "APS In-Home",
+                "Childs Medical/Dental/Mental Health Records"]
     didPass = true
     tbod = @driver.find_elements(:xpath, "//tbody[@id = 'tbod']/tr")
     #puts "tbod: #{tbod}"
@@ -31,7 +32,7 @@ class VEFtabNames2ndColumn < Test
             else
               didPass = (index == 1) ? false : didPass
             end
-            puts didPass
+            #puts didPass
           end
         end
       else
