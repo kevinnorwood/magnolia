@@ -20,8 +20,6 @@ class VEFviewDocumentLinksExists < Test
         #has th elements,
       end
     end
-
-
     return false
   rescue => e
     puts "An error has occurred in #{self.class.name}.#{__method__}"
