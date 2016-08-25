@@ -17,7 +17,7 @@ class RequestStatus < TestDriver #TODO: Change name
       RSclickToIcon,
       RStypeDate,
       RScalClickFromDate,
-      # RSclickDateTo,
+      RScalClickToDate,
       RSusernameCase
     ].each do |test|
       add_member_test(test)
