@@ -1,4 +1,4 @@
-class RScalFromIcon < Test
+class RSclickToIcon < Test
 
 
   def did_test_pass
@@ -14,7 +14,7 @@ class RScalFromIcon < Test
   end
 
   def perform
-    icon = @driver.find_element(:xpath, "//img[@id = 'calFrom']")
+    icon = @driver.find_element(:xpath, "//img[@id = 'calTo']")
     icon.click
   rescue => e
     puts "An error has occurred in #{self.class.name}.#{__method__}"

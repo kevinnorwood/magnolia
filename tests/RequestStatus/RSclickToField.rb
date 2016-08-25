@@ -1,4 +1,4 @@
-class RSdateToCalendar < Test
+class RSclickToField < Test
 
 
   def did_test_pass
