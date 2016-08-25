@@ -12,7 +12,8 @@ class ViewExternalFile < TestDriver
       VEFcolumnHeaderIcons,
       VEFviewDocumentClick,
       VEFtabNames2ndColumn,
-      VEFtabNamesNotDuplicated
+      VEFtabNamesNotDuplicated,
+      VEFviewDocumentLinksExists
     ].each do |test|
       add_member_test(test)
     end
