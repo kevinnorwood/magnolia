@@ -13,6 +13,8 @@ class RequestStatus < TestDriver #TODO: Change name
       RScalFromArrows,
       RScalToArrows,
       RScalendarIcons,
+      RScalFromIcon,
+      RScalToIcon,
       RStypeDate,
       RSusernameCase
     ].each do |test|

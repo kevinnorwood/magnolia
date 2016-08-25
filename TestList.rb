@@ -23,6 +23,8 @@ require_relative 'tests/RequestStatus/RSdateToCalendar'
 require_relative 'tests/RequestStatus/RScalFromArrows'
 require_relative 'tests/RequestStatus/RScalToArrows'
 require_relative 'tests/RequestStatus/RScalendarIcons'
+require_relative 'tests/RequestStatus/RScalFromIcon'
+require_relative 'tests/RequestStatus/RScalToIcon'
 require_relative 'tests/RequestStatus/RSusernameCase'
 require_relative 'tests/RequestStatus/RStypeDate'
 
