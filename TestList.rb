@@ -32,6 +32,7 @@ require_relative 'tests/RequestStatus/RStypeDate'
 require_relative 'tests/RequestStatus/RScalClickFromDate'
 require_relative 'tests/RequestStatus/RScalClickToDate'
 require_relative 'tests/RequestStatus/RScalFirstWeek'
+require_relative 'tests/RequestStatus/RSsearchProcessRequest'
 
 require_relative 'tests/ViewExternalFile/VEFbuttonExists'
 require_relative 'tests/ViewExternalFile/VEFbuttonClick'
