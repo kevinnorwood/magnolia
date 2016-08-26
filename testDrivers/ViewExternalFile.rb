@@ -15,7 +15,8 @@ class ViewExternalFile < TestDriver
       VEFtabNamesNotDuplicated,
       VEFviewDocumentLinksExists,
       VEFNDEbackButtonClick,
-      VEFviewPhotoLinksExists
+      VEFviewPhotoLinksExists,
+      VEFviewPhotoClick
     ].each do |test|
       add_member_test(test)
     end
