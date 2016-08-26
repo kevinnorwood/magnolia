@@ -9,6 +9,7 @@ class RequestStatus < TestDriver #TODO: Change name
       RSbannerDisplayed,
       RSemptyFields,
       RSsubmitButtonExists,
+      RSsubmitButtonColor,
       RSclickFromField,
       RSclickToField,
       RScalFromArrows,
