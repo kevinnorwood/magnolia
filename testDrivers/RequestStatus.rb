@@ -22,7 +22,8 @@ class RequestStatus < TestDriver #TODO: Change name
       RScalClickToDate,
       RScalFirstWeek,
       RSusernameCase,
-      RSsearchProcessRequest
+      RSsearchProcessRequest,
+      RSresultsDisplay
     ].each do |test|
       add_member_test(test)
     end
