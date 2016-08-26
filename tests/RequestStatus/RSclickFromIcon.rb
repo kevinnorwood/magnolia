@@ -1,13 +1,10 @@
-class RScaseNumbersDisplayed < Test
+class RSclickFromIcon < Test
 
 
   def did_test_pass
-    cases = @driver.find_element(:id, "my_external_cases")
-    # puts "cases.text: #{cases.text}"
-    if (cases.text == "99999901, 123456, 654321") then
+    calendar = @driver.find_element(:id, 'ui-datepicker-div')
+    if (calendar.displayed?)
       return true
-    else
-      return false
     end
     return false
   rescue => e
@@ -17,7 +14,8 @@ class RScaseNumbersDisplayed < Test
   end
 
   def perform
-    #TODO: Impliment
+    icon = @driver.find_element(:xpath, "//img[@id = 'calFrom']")
+    icon.click
   rescue => e
     puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message

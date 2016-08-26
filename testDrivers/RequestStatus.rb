@@ -8,12 +8,17 @@ class RequestStatus < TestDriver #TODO: Change name
       RStitleIconDisplayed,
       RSbannerDisplayed,
       RSemptyFields,
-      RSdateFromCalendar,
-      RSdateToCalendar,
+      RSclickFromField,
+      RSclickToField,
       RScalFromArrows,
       RScalToArrows,
       RScalendarIcons,
+      RSclickFromIcon,
+      RSclickToIcon,
       RStypeDate,
+      RScalClickFromDate,
+      RScalClickToDate,
+      RScalFirstWeek,
       RSusernameCase
     ].each do |test|
       add_member_test(test)
