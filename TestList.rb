@@ -12,6 +12,8 @@ require_relative 'tests/OneCaseMain/OCMnotesExist'
 require_relative 'tests/RequestRedaction/RRbuttonExists'
 require_relative 'tests/RequestRedaction/RRbuttonClick'
 
+require_relative 'tests/RequestResearch/RResSubmitForm'
+
 require_relative 'tests/RequestStatus/RSbuttonExists'
 require_relative 'tests/RequestStatus/RSbuttonClick'
 require_relative 'tests/RequestStatus/RScaseNumbersDisplayed'
