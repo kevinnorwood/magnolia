@@ -1,4 +1,4 @@
-class VEFNDEbackButtonClick < Test
+class VEFviewPhotoBackButtonClick < Test
 
 
   def did_test_pass
@@ -33,8 +33,8 @@ class VEFNDEbackButtonClick < Test
         if inner_elements.count > 0 then
           #puts "#{tr} contains td tags"
           #puts "#{inner_elements[1].text}: #{inner_elements[2].text}"
-          if (inner_elements[2].text == "View Document") then
-            view_doc_link = inner_elements[2].find_element(:xpath, ".//a")
+          if (inner_elements[3].text == "View Photo") then
+            view_doc_link = inner_elements[3].find_element(:xpath, ".//a")
             view_doc_link.click
             all_windows = @driver.window_handles
             new_window = all_windows.select { |this_window| this_window != @first_window }
