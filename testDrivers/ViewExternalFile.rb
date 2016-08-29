@@ -21,7 +21,7 @@ class ViewExternalFile < TestDriver
       VEFviewVideoLinksExists,
       VEFviewVideoClick,
       VEFviewVideoBackButtonClick,
-      VEFviewAudioLinksExists
+      VEFlistenToAudioLinksExists
     ].each do |test|
       add_member_test(test)
     end

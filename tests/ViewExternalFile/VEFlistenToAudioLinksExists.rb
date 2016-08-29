@@ -1,4 +1,4 @@
-class VEFviewAudioLinksExists < Test
+class VEFlistenToAudioLinksExists < Test
 
 
   def did_test_pass
