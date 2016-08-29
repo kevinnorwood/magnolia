@@ -1,10 +1,21 @@
-class VEFlistenToAudioClick < Test
+class VEFlistenToAudioBackButtonClick < Test
 
 
   def did_test_pass
-    puts "@expected_tab_names: #{@expected_tab_names}"
-    puts "@found_tab_names: #{@found_tab_names}"
-    return @expected_tab_names.eql?(@found_tab_names)
+    if (@driver.window_handles.count == 1) then
+      @driver.switch_to.window(@driver.window_handles[0])
+      if(@driver.current_url == 'https://qa1.neuone.com/rhamilton/onecase4200/index.php/request/external#') then
+        if(@driver.title == "View External File") then
+          return true
+        else
+          return false
+        end
+      else
+        return false
+      end
+    else
+      return false
+    end
   rescue => e
     puts "An error has occurred in #{self.class.name}.#{__method__}"
     puts e.message
@@ -12,9 +23,7 @@ class VEFlistenToAudioClick < Test
   end
 
   def perform
-    @expected_tab_names = []
-    @found_tab_names = []
-    first_window = @driver.window_handle
+    @first_window = @driver.window_handle
     tbod = @driver.find_elements(:xpath, "//tbody[@id = 'tbod']/tr")
     tbod.each_with_index do |tr, index|
       inner_elements = get_elements(index, "th")
@@ -25,13 +34,15 @@ class VEFlistenToAudioClick < Test
           #puts "#{tr} contains td tags"
           #puts "#{inner_elements[1].text}: #{inner_elements[2].text}"
           if (inner_elements[5].text == "Listen to Audio") then
-            @expected_tab_names.push(inner_elements[1].text)
             view_doc_link = inner_elements[5].find_element(:xpath, ".//a")
             view_doc_link.click
             all_windows = @driver.window_handles
-            new_window = all_windows.select { |this_window| this_window != first_window }
+            new_window = all_windows.select { |this_window| this_window != @first_window }
             @driver.switch_to.window(new_window)
-            sleep 5
+            sleep 3
+            back_button = @driver.find_element(:xpath, "//div[@class = 'button short']")
+            inner_link = back_button.find_element(:xpath, './/a')
+            #check for survey, if present, dismiss it
             survey_div = @driver.find_element(:id, "initial-onecase")
             if (survey_div.displayed? == true) then
               no_button = survey_div.find_element(:link, "No, Not right now.")
@@ -39,13 +50,8 @@ class VEFlistenToAudioClick < Test
               close_button = @driver.find_element(:id, "onecase-close")
               close_button.click
             end
-            active_tab = @driver.find_element(:class, "active")
-            tab_link = active_tab.find_element(:xpath, ".//a[1]")
-            #puts "tab_link.text: #{tab_link.text}"
-            #puts "tab_link.attribute('fullstr'): #{tab_link.attribute('fullstr')}"
-            @found_tab_names.push(tab_link.attribute('fullstr'))
-            @driver.close
-            @driver.switch_to.window(first_window)
+            inner_link.click
+            return
           end
           #has no td elements
         end
